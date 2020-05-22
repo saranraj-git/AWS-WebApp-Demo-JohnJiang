@@ -102,9 +102,11 @@ $db_username = "username";
 $db_password = "password";
 ~~~~
 
-In your browser, browse to http://public-ip-address-of-your-ec2-instance/web-demo/index.php. You should see that our application is now working. You can login with your name, then upload some photos for testing. (You might have noticed that this demo application does not ask you for a password. This is because we would like to make things as simple as possible. Handling user password is a very complicate issue, which is beyond the scope of this entry level tutorial.) Then I suggest that you spend 10 minutes reading through the demo code index.php. The demo code has reasonable documentation in the form of comments, so I am not going to explain the code here.
+In your browser, browse to http://public-ip-address-of-your-ec2-instance/web-demo/index.php. You should see that our application is now working. You can login with your name, then upload some photos for testing. (You might have noticed that this demo application does not ask you for a password. This is because we would like to make things as simple as possible. Handling user password is a very complicate issue, which is beyond the scope of this entry level tutorial.) 
 
-Now you are able to get your website working, please upload some more pictures for testing. Upload some small pictures and some big pictures (like 20 MB) to see what happens. Fix any issues you may observe in the tests.
+If you get a blank page, check the Apache2 logs */var/log/apache2/access.log* and */var/log/apache2/error.log*. If your HTTP request hits Apache2, there will be a record in the access log. If Apache2 was unable to handle the request, there will be something in the error log.
+
+Now you are able to get your website working, please upload some more pictures for testing. Upload some small pictures and some big pictures (like 20 MB) to see what happens. Fix any issues you may observe in the tests. Then I suggest that you spend 10 minutes reading through the demo code index.php. The demo code has reasonable documentation in the form of comments, so I am not going to explain the code here.
 
 **(3) LEVEL 1**
 
