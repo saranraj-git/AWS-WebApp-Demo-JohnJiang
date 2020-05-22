@@ -92,9 +92,17 @@ $ cd /var/www/html/web-demo
 $ mysql -u username -p web_demo < web_demo.sql
 ~~~~
 
-Use a text editor to open config.php, then change the username and password for your MySQL installation. The example commands before created a DB user named "username" with the password "password". This is the default DB credentials configured in config.php. If you used a different username or password, update config.php accordingly.
+Use a text editor to open config.php, then change the username and password in config.php, matching the username and password you used in the above-mentioned "CREATE USER" statement. 
 
-In your browser, browse to http://ip-address/web-demo/index.php. You should see that our application is now working. You can login with your name, then upload some photos for testing. (You might have noticed that this demo application does not ask you for a password. This is because we would like to make things as simple as possible. Handling user password is a very complicate issue, which is beyond the scope of this entry level tutorial.) Then I suggest that you spend 10 minutes reading through the demo code index.php. The demo code has reasonable documentation in the form of comments, so I am not going to explain the code here.
+~~~~
+// Database connection parameters
+$db_hostname = "localhost";
+$db_database = "web_demo";
+$db_username = "username";
+$db_password = "password";
+~~~~
+
+In your browser, browse to http://public-ip-address-of-your-ec2-instance/web-demo/index.php. You should see that our application is now working. You can login with your name, then upload some photos for testing. (You might have noticed that this demo application does not ask you for a password. This is because we would like to make things as simple as possible. Handling user password is a very complicate issue, which is beyond the scope of this entry level tutorial.) Then I suggest that you spend 10 minutes reading through the demo code index.php. The demo code has reasonable documentation in the form of comments, so I am not going to explain the code here.
 
 Now you are able to get your website working, please upload some more pictures for testing. Upload some small pictures and some big pictures (like 20 MB) to see what happens. Fix any issues you may observe in the tests.
 
